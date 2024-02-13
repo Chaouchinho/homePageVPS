@@ -131,7 +131,7 @@
                                               <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
                                           </a>
                                       </div>
-                                      <div class="hexagon-item" style="z-index: -99;">
+                                      <div class="hexagon-item" id="invoicegenbtn">
                                           <div class="hex-item">
                                               <div></div>
                                               <div></div>
@@ -147,7 +147,7 @@
                                                   <span class="icon">
                                                       <i class="fa fa-clipboard"></i>
                                                   </span>
-                                                  <span class="title">Testimonials</span>
+                                                  <span class="title">Invoice generator</span>
                                               </span>
                                               <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
                                           </a>
@@ -193,6 +193,13 @@
         document.getElementById("filebtn").onclick = function () {
             window.open("http://137.74.194.167:9081", '_blank').focus();
         };
+
+        document.getElementById("invoicegenbtn").onclick = function () {
+            window.open("http://137.74.194.167:9081/invoice", '_blank').focus();
+        };
+
+
+        
     </script>
 </body>
 </html>
