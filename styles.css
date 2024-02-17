@@ -628,4 +628,14 @@ body {
   }
   
   
+.status {
+  font-weight: bold;
+  color: gray; /* couleur par défaut */
+}
+.status.on {
+  color: green; /* couleur si le service est UP */
+}
+.status.off {
+  color: red; /* couleur si le service est DOWN */
+}
   
