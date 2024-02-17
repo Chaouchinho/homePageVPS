@@ -200,7 +200,7 @@
         };
 
         function checkServiceStatus(url, elementId) {
-            fetch("https://sohibtabiche.com/redirect.php?url=" + url)
+            fetch("http://137.74.194.167/redirect.php?url=" + url)
                 .then(response => {
                 if (response.ok) {
                     document.getElementById(elementId).textContent = 'Statut : ON';
