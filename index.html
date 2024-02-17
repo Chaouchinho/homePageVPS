@@ -43,6 +43,7 @@
                                                     <i class="far fa-user-circle"></i>
                                                   </span>
                                                   <span class="title">Personnal Website</span>
+                                                  <p id="sohibwebsiteStatus" class="status">En cours de chargement...</p>
                                               </span>
                                               <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
                                           </a>
@@ -64,6 +65,7 @@
                                                     <i class="far fa-folder-open"></i>
                                                   </span>
                                                   <span class="title">File Manager</span>
+                                                  <p id="fileStatus" class="status">En cours de chargement...</p>
                                               </span>
                                               <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
                                           </a>
@@ -85,6 +87,7 @@
                                                     <i class="fab fa-github"></i>
                                                   </span>
                                                   <span class="title">Github</span>
+                                                  <p id="githubStatus" class="status">En cours de chargement...</p>
                                               </span>
                                               <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
                                           </a>    
@@ -106,7 +109,7 @@
                                                     <i class="fab fa-jenkins"></i>
                                                   </span>
                                                   <span class="title">Jenkins</span>
-                                                  <p id="status1" class="status">En cours de chargement...</p>
+                                                  <p id="jenkinsStatus" class="status">En cours de chargement...</p>
                                               </span>
                                               <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
                                           </a>
@@ -149,6 +152,7 @@
                                                       <i class="fa fa-clipboard"></i>
                                                   </span>
                                                   <span class="title">Invoice generator</span>
+                                                  <p id="invoicegenStatus" class="status">En cours de chargement...</p>
                                               </span>
                                               <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
                                           </a>
@@ -203,25 +207,29 @@
             fetch("http://137.74.194.167/redirect.php?url=" + url)
                 .then(response => {
                 if (response.ok) {
-                    document.getElementById(elementId).textContent = 'Statut : ON';
+                    document.getElementById(elementId).textContent = 'ON';
                     document.getElementById(elementId).classList.remove('off');
                     document.getElementById(elementId).classList.add('on');
                 } else {
-                    document.getElementById(elementId).textContent = 'Statut : OFF';
+                    document.getElementById(elementId).textContent = 'OFF';
                     document.getElementById(elementId).classList.remove('on');
                     document.getElementById(elementId).classList.add('off');
                 }
                 })
                 .catch(error => {
                 console.error('Erreur lors de la récupération du statut du service :', error);
-                document.getElementById(elementId).textContent = 'Statut : OFF (Erreur)';
+                document.getElementById(elementId).textContent = 'OFF (Erreur)';
                 document.getElementById(elementId).classList.remove('on');
                 document.getElementById(elementId).classList.add('off');
                 });
         }
 
         // Vérification du statut des services
-        checkServiceStatus('https://sohibtabiche.com/', 'status1');
+        checkServiceStatus('http://137.74.194.167:9090/login?from=%2F', 'jenkinsStatus');
+        checkServiceStatus('https://github.com/Chaouchinho', 'githubStatus');
+        checkServiceStatus('https://sohibtabiche.com', 'sohibwebsiteStatus');
+        checkServiceStatus('http://137.74.194.167:9081', 'fileStatus');
+        checkServiceStatus('http://137.74.194.167/invoice', 'invoicegenStatus');
 
 
         
