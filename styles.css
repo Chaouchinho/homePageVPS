@@ -633,12 +633,17 @@ body {
     height: 20px;
     border-radius: 50%;
     display: inline-block;
-  }
-  
-  .status.on {
-    background-color: green;
+    margin-top: 10px;
+    background-color: #4CAF50; /* Vert par défaut */
+    box-shadow: inset 0px 3px 8px rgba(0,0,0,0.3);
+    border: 2px solid #ffffff; /* Ajout du contour */
   }
   
   .status.off {
-    background-color: red;
+    background-color: #f44336; /* Rouge pour OFF */
+  }
+  
+  .status:active {
+    box-shadow: none;
+    transform: translateY(2px);
   }
