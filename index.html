@@ -207,7 +207,7 @@
             fetch("http://137.74.194.167/redirect.php?url=" + url)
                 .then(response => {
                 if (response.ok) {
-                    document.getElementById(elementId).textContent = 'ON';
+                    document.getElementById(elementId).textContent = '';
                     document.getElementById(elementId).classList.remove('off');
                     document.getElementById(elementId).classList.add('on');
                 } else {
@@ -218,7 +218,7 @@
                 })
                 .catch(error => {
                 console.error('Erreur lors de la récupération du statut du service :', error);
-                document.getElementById(elementId).textContent = 'OFF (Erreur)';
+                document.getElementById(elementId).textContent = '';
                 document.getElementById(elementId).classList.remove('on');
                 document.getElementById(elementId).classList.add('off');
                 });
