@@ -634,7 +634,7 @@ body {
     border-radius: 50%;
     display: inline-block;
     margin-top: 10px;
-    background-color: #ff9900; /* Vert par défaut */
+    background-color: #5fb2f9; /* bleu par défaut */
     box-shadow: inset 0px 3px 8px rgba(0,0,0,0.3);
     border: 2px solid #ffffff; /* Ajout du contour */
   }
