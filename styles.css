@@ -634,7 +634,7 @@ body {
     border-radius: 50%;
     display: inline-block;
     margin-top: 10px;
-    background-color: #4CAF50; /* Vert par défaut */
+    background-color: #ff9900; /* Vert par défaut */
     box-shadow: inset 0px 3px 8px rgba(0,0,0,0.3);
     border: 2px solid #ffffff; /* Ajout du contour */
   }
@@ -642,6 +642,11 @@ body {
   .status.off {
     background-color: #f44336; /* Rouge pour OFF */
   }
+  
+    .status.on {
+    background-color: #4CAF50; /* Rouge pour OFF */
+  }
+  
   
   .status:active {
     box-shadow: none;
